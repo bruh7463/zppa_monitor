@@ -1,0 +1,49 @@
+name: ZPPA Tender Monitor
+
+on:
+  schedule:
+    # Runs at 06:00, 11:00, and 16:00 UTC = 08:00, 13:00, 18:00 CAT (Lusaka time)
+    - cron: '0 6 * * *'
+    - cron: '0 11 * * *'
+    - cron: '0 16 * * *'
+
+  # Lets you trigger a manual run from the GitHub Actions tab anytime
+  workflow_dispatch:
+
+jobs:
+  check-tenders:
+    runs-on: ubuntu-latest
+
+    # Required so the job can commit the state file back to the repo
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run ZPPA tender monitor
+        env:
+          ZPPA_EMAIL_TO:      ${{ secrets.ZPPA_EMAIL_TO }}
+          ZPPA_EMAIL_FROM:    ${{ secrets.ZPPA_EMAIL_FROM }}
+          ZPPA_EMAIL_PASS:    ${{ secrets.ZPPA_EMAIL_PASS }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python zppa_monitor.py
+
+      - name: Commit updated state file
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add zppa_seen_tenders.json
+          # Only commit if the state file actually changed
+          git diff --staged --quiet || git commit -m "chore: update ZPPA tender state [skip ci]"
+          git push
