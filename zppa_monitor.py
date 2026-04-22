@@ -45,7 +45,7 @@ KEYWORDS = [
 
 # How many pages to scan per run (1 page = 10 tenders, most recent first)
 # 5 pages = 50 tenders. Increase if tenders are posted very frequently.
-MAX_PAGES = 5
+MAX_PAGES = 10
 
 # JSON file that tracks which tenders have already triggered an alert.
 # This file is committed back to your repo by the workflow so state persists.
@@ -133,7 +133,7 @@ def parse_tenders(soup: BeautifulSoup) -> list[dict]:
             continue
 
         href  = title_tag.get("href", "")
-        link  = BASE_URL + href if href else ""
+        link  = href if href.startswith("http") else (BASE_URL + href if href.startswith("/") else f"{BASE_URL}/{href}")
         rid   = href.split("resourceId=")[-1].split("&")[0] if "resourceId=" in href else ""
         title = title_tag.get_text(strip=True)
 
@@ -144,7 +144,7 @@ def parse_tenders(soup: BeautifulSoup) -> list[dict]:
             "entity":   cols[3].get_text(strip=True),
             "deadline": cols[4].get_text(strip=True),
             "method":   cols[5].get_text(strip=True),
-            "status":   cols[7].get_text(strip=True) if len(cols) > 7 else "Unknown",
+            "status":   cols[6].get_text(strip=True) if len(cols) > 6 else "Unknown",
             "link":     link,
         })
     return tenders
@@ -188,7 +188,7 @@ def get_tender_status(resource_id: str) -> str:
         )
         soup = BeautifulSoup(resp.text, "html.parser")
         text = soup.get_text()
-        for word in ["Awarded", "Cancelled", "Evaluation", "Published", "Closed", "Pending"]:
+        for word in ["Awarded", "Cancelled", "Evaluation", "Published", "Closed", "Pending", "Suspended"]:
             if word.lower() in text.lower():
                 return word
         return "Unknown"
