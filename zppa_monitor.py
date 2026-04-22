@@ -41,11 +41,12 @@ KEYWORDS = [
     "facilities management",
     "general maintenance",
     "cleaning services",
+    "maintenance",
 ]
 
 # How many pages to scan per run (1 page = 10 tenders, most recent first)
 # 5 pages = 50 tenders. Increase if tenders are posted very frequently.
-MAX_PAGES = 30
+MAX_PAGES = 50
 
 # JSON file that tracks which tenders have already triggered an alert.
 # This file is committed back to your repo by the workflow so state persists.
