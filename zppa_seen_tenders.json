@@ -1,1 +1,35 @@
-{} 
+{
+  "25473776": {
+    "title": "RETENDER FOR SUPPLY AND DELIVERY OF CLEANING MATERIALS AT UTH-ADULT P15",
+    "ref": "20458/2/661/2026",
+    "entity": "University Teaching Hospital - Adult Hospital",
+    "deadline": "Tue Apr 21 08:30:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25473776",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-22 15:17 UTC"
+  },
+  "25464530": {
+    "title": "Tender for the supply of cleaning materials to Provincial Administration",
+    "ref": "1198/2/1168/2026",
+    "entity": "Muchinga Provincial Administration",
+    "deadline": "Wed Apr 22 12:00:00 CAT 2026",
+    "method": "Direct Bidding",
+    "status": "",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25464530",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-22 15:17 UTC"
+  },
+  "25463881": {
+    "title": "Tender for the procurement of cleaning materials and protective Equipment for Sub Court Ndola",
+    "ref": "75975/2/3238/2026",
+    "entity": "Judiciary of Zambia",
+    "deadline": "Wed Apr 22 08:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25463881",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-22 15:17 UTC"
+  }
+}
