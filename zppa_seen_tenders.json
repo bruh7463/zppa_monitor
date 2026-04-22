@@ -108,5 +108,38 @@
     "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25415168",
     "matched_kw": "cleaning",
     "first_seen": "2026-04-22 17:04 UTC"
+  },
+  "25415239": {
+    "title": "Supply and delivery of Stationery, Cleaning Materials and Toner for the Zambia Credit Guarantee Scheme Limited (ZCGS)",
+    "ref": "59178/2/178/2026",
+    "entity": "Zambia Credit Guarantee Scheme Limited",
+    "deadline": "Tue Apr 21 10:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25415239",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-22 17:20 UTC"
+  },
+  "25411003": {
+    "title": "SUPPLY AND DEVIVERY OF STATIONERY AND CLEANING MATERIALS AT DEC MUCHINGA PROVINCE",
+    "ref": "20382/2/462/2026",
+    "entity": "Drug Enforcement Commission",
+    "deadline": "Wed Apr 22 10:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25411003",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-22 17:20 UTC"
+  },
+  "25407709": {
+    "title": "PROCUREMENT OF HARDWARE MATERIALS FOR GENERAL MAINTENANCE WORKS UNDER RDC FUNDS",
+    "ref": "27332/2/703/2026",
+    "entity": "Chipata Central Hospital",
+    "deadline": "Mon Apr 20 10:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25407709",
+    "matched_kw": "general maintenance",
+    "first_seen": "2026-04-22 17:20 UTC"
   }
 }
