@@ -416,5 +416,71 @@
     "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25400765",
     "matched_kw": "pest control",
     "first_seen": "2026-04-23 12:01 UTC"
+  },
+  "25555755": {
+    "title": "Tender for the repair and maintenance of a semi-micro balance",
+    "ref": "57250/3/1021/2026",
+    "entity": "Zambia Medicines Regulatory Authority",
+    "deadline": "Thu Apr 23 14:00:00 CAT 2026",
+    "method": "Direct Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25555755",
+    "matched_kw": "maintenance",
+    "first_seen": "2026-04-23 17:22 UTC"
+  },
+  "25537722": {
+    "title": "Supply and Delivery of Cleaning Materials",
+    "ref": "33711/3/397/2026",
+    "entity": "Zambia Centre for Accountancy Studies",
+    "deadline": "Thu Apr 23 10:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25537722",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-23 17:22 UTC"
+  },
+  "25526586": {
+    "title": "TENDER FOR THE SUPPLY AND DELIVERY OF CLEANING MATERIALS UNDER RDC FUNDS",
+    "ref": "27332/2/719/2026",
+    "entity": "Chipata Central Hospital",
+    "deadline": "Thu Apr 23 10:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25526586",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-23 17:22 UTC"
+  },
+  "25502797": {
+    "title": "Tender for the supply and delivery of cleaning materials",
+    "ref": "104390/2/91/2026",
+    "entity": "SENANGA DISTRICT HEALTH OFFICE",
+    "deadline": "Thu Apr 23 10:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25502797",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-23 17:22 UTC"
+  },
+  "25470626": {
+    "title": "TENDER FOR THE SUPPLY AND DELIVERY OF CLEANING MATERIALS -HARID",
+    "ref": "7619/2/1486/2026",
+    "entity": "Ministry of Home Affairs",
+    "deadline": "Wed Apr 22 10:50:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25470626",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-23 17:22 UTC"
+  },
+  "25440690": {
+    "title": "TENDER FOR SUPPLY AND DELIVERY OF MAINTENANCE MATERIALS TO KANYANTA GIRLS SECONDARY SCHOOL IN MUNGWI",
+    "ref": "42175/2/546/2026",
+    "entity": "Provincial Education Office Kasama",
+    "deadline": "Tue Apr 21 10:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25440690",
+    "matched_kw": "maintenance",
+    "first_seen": "2026-04-23 17:22 UTC"
   }
 }
