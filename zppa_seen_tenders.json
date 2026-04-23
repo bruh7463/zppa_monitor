@@ -339,5 +339,38 @@
     "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25323809",
     "matched_kw": "maintenance",
     "first_seen": "2026-04-22 17:58 UTC"
+  },
+  "25506943": {
+    "title": "Tender to Supply and Deliver Cleaning Materials - DWRD",
+    "ref": "67774/2/573/2026",
+    "entity": "Ministry of Water Development and Sanitation",
+    "deadline": "Wed Apr 22 17:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25506943",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-23 07:56 UTC"
+  },
+  "25432856": {
+    "title": "SUPPLY AND DELIVERY OF CUT-MIX DRUMS AND 20ton 3mm- 6mm STONES  FOR ONGOING ROAD MAINTENANCE",
+    "ref": "39268/2/220/2026",
+    "entity": "Kasempa Town Council",
+    "deadline": "Wed Apr 22 10:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25432856",
+    "matched_kw": "maintenance",
+    "first_seen": "2026-04-23 07:56 UTC"
+  },
+  "25384592": {
+    "title": "TENDER FOR THE SUPPLY AND DELIVERY  CLEANING MATERIALS  FOR ANATOMY DISSECTING ROOM UNDER SCHOOL OF  MEDICINE AT THE UNIVERSITY OF ZAMBIA",
+    "ref": "28896/2/4176/2026",
+    "entity": "The University of Zambia",
+    "deadline": "Wed Apr 22 12:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25384592",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-23 07:56 UTC"
   }
 }
