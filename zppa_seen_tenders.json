@@ -372,5 +372,49 @@
     "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25384592",
     "matched_kw": "cleaning",
     "first_seen": "2026-04-23 07:56 UTC"
+  },
+  "25529226": {
+    "title": "PROCUREMENT OF CLEANING MATERIALS FOR VARIOUS DEPARTMENTS UNDER RDC FUNDS",
+    "ref": "27332/2/720/2026",
+    "entity": "Chipata Central Hospital",
+    "deadline": "Thu Apr 23 10:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25529226",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-23 12:01 UTC"
+  },
+  "25441514": {
+    "title": "PROCUREMENT OF CLEANING MATERIALS",
+    "ref": "101143/2/157/2026",
+    "entity": "Ndola College of Biomedical Sciences",
+    "deadline": "Wed Apr 22 10:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25441514",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-23 12:01 UTC"
+  },
+  "25411915": {
+    "title": "tender for the supply of cleaning materials April 2026 Residential School",
+    "ref": "30865/2/396/2026",
+    "entity": "David Livingstone College of Education",
+    "deadline": "Wed Apr 22 12:00:00 CAT 2026",
+    "method": "Simplified Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25411915",
+    "matched_kw": "cleaning",
+    "first_seen": "2026-04-23 12:01 UTC"
+  },
+  "25400765": {
+    "title": "TENDER FOR THE SUPPLY AND DELIVERY OF CHEMICALS FOR PEST CONTROL",
+    "ref": "24160/2/2034/2026",
+    "entity": "Zambia Airports Corporation Limited",
+    "deadline": "Tue Apr 21 14:00:00 CAT 2026",
+    "method": "Direct Bidding",
+    "status": "View Opened Bids",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25400765",
+    "matched_kw": "pest control",
+    "first_seen": "2026-04-23 12:01 UTC"
   }
 }
