@@ -537,7 +537,7 @@ def build_email(new_tenders: list[dict], status_changes: list[dict]) -> str:
     new_section = ""
     if new_tenders:
         new_section = f"""
-        <h3 style="color:#1a4f8a;margin-top:24px;">🔔 New Cleaning Tenders ({len(new_tenders)})</h3>
+        <h3 style="color:#1a4f8a;margin-top:24px;">🔔 New Tenders ({len(new_tenders)})</h3>
         <table style="width:100%;border-collapse:collapse;font-family:Arial,sans-serif;font-size:13px;">
           <tr style="background:#1a4f8a;color:white;text-align:left;">
             <th style="padding:10px 8px;">Title</th>
