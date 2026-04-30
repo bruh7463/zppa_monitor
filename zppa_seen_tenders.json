@@ -476,5 +476,20 @@
     "unspsc_label": "Building and Construction Machinery and Accessories",
     "matched_kw": null,
     "first_seen": "2026-04-30 14:41 UTC"
+  },
+  "25769180": {
+    "title": "TENDER FOR SUPPLY AND DELIVERY OF FENCING MATERIALS FOR LUMEZI NORTH AND SOUTH CONSTITUENCIES (VALLEY PART - 50KM STRETCH) - RESERVED FOR LUMEZI DOMICILED CITIZEN BIDDERS",
+    "ref": "Lumezi Town Council",
+    "entity": "",
+    "deadline": "Fri May 29 09:10:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25769180",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": null,
+    "first_seen": "2026-04-30 17:23 UTC"
   }
 }
