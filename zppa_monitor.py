@@ -3,8 +3,8 @@ ZPPA Tender Monitor — GitHub Actions Edition
 ==============================================
 Designed to run as a single-shot script on a GitHub Actions schedule.
 Uses the correct ZPPA advanced search endpoint (viewCFTSAction.do) with
-UNSPSC code 76000000 (Industrial Cleaning Services). Falls back to keyword
-scanning of the opened-bids listing if UNSPSC returns nothing.
+multiple UNSPSC codes. Falls back to keyword scanning of the opened-bids
+listing if UNSPSC returns nothing.
 
 State is persisted via a JSON file committed back to the repo between runs.
 
@@ -32,15 +32,21 @@ from email.mime.multipart import MIMEMultipart
 # CONFIGURATION
 # ─────────────────────────────────────────────
 
-# UNSPSC code + portal label (must match exactly what ZPPA uses).
-# 76000000 = Industrial Cleaning Services (confirmed working on portal).
-UNSPSC_CODE  = "76000000"
-UNSPSC_LABEL = "Industrial Cleaning Services"
+# UNSPSC codes + portal labels (must match exactly what ZPPA uses).
+# Add or remove codes here. The label must match what the portal shows
+# in its advanced search dropdown.
+UNSPSC_CODES = {
+    "76000000": "Industrial Cleaning Services",
+    "72000000": "Building and Construction and Maintenance Services",
+    "30000000": "Structures and Building and Construction",
+    "22000000": "Building and Construction Machinery and Accessories",
+}
 
 # Keyword validation — checked against tender TITLE ONLY (not ref/entity).
 # Used as secondary filter on UNSPSC results and primary filter for fallback.
 KEYWORDS = [
     "cleaning",
+    "construction",
     "janitorial",
     "sanitation",
     "hygiene",
@@ -256,7 +262,7 @@ def parse_deadline(deadline_str: str) -> datetime | None:
 def has_enough_time(deadline_str: str) -> bool:
     dt = parse_deadline(deadline_str)
     if dt is None:
-        return True  # unknown — include, let user decide
+        return True
     return dt >= datetime.now() + timedelta(days=MIN_DAYS_BEFORE_DEADLINE)
 
 
@@ -281,8 +287,6 @@ def keyword_match(title: str) -> str | None:
     """
     Return the matched keyword, or None.
     Only checks the tender TITLE — NOT ref or entity.
-    Prevents false positives like 'Ministry of Water Development
-    and Sanitation' matching a bicycle tender.
     """
     title_lower = title.lower()
     for kw in KEYWORDS:
@@ -295,17 +299,10 @@ def keyword_match(title: str) -> str | None:
 # SCRAPING — CORRECT ADVANCED SEARCH ENDPOINT
 # ─────────────────────────────────────────────
 
-def build_advanced_search_params(page: int = 1) -> list[tuple]:
+def build_advanced_search_params(code: str, label: str, page: int = 1) -> list[tuple]:
     """
     Build the exact query parameters the ZPPA advanced search form sends.
-    Uses list of tuples because the portal expects duplicate keys
-    (e.g. cpcCategory= appears twice, description= appears twice).
-
-    Mirrors:
-    viewCFTSAction.do?cpcCategory=&cpcCategory=0&isFTS=true&...
-      &unspscArray=76000000-Industrial+Cleaning+Services
-      &unspscLabels=76000000&...
-      &d-3680175-p=1
+    Uses list of tuples because the portal expects duplicate keys.
     """
     return [
         ("cpcCategory",           ""),
@@ -323,7 +320,7 @@ def build_advanced_search_params(page: int = 1) -> list[tuple]:
         ("contractType",          ""),
         ("estimatedValueMin",     ""),
         ("submissionUntilDate",   ""),
-        ("unspscArray",           f"{UNSPSC_CODE}-{UNSPSC_LABEL}"),
+        ("unspscArray",           f"{code}-{label}"),
         ("tenderOpeningUntilDate", ""),
         ("isPopup",               "false"),
         ("procedure",             ""),
@@ -331,7 +328,7 @@ def build_advanced_search_params(page: int = 1) -> list[tuple]:
         ("tenderOpeningFromDate", ""),
         ("status",                ""),
         ("status",                ""),
-        ("unspscLabels",          UNSPSC_CODE),
+        ("unspscLabels",          code),
         ("publicationUntilDate",  ""),
         ("UNSPSCCodes",           ""),
         ("submissionFromDate",    ""),
@@ -340,12 +337,12 @@ def build_advanced_search_params(page: int = 1) -> list[tuple]:
     ]
 
 
-def fetch_advanced_page(page: int) -> BeautifulSoup | None:
-    """Fetch one page of the ZPPA advanced search for our UNSPSC code."""
-    params = build_advanced_search_params(page)
+def fetch_advanced_page(code: str, label: str, page: int) -> BeautifulSoup | None:
+    """Fetch one page of the ZPPA advanced search for a given UNSPSC code."""
+    params = build_advanced_search_params(code, label, page)
     resp = resilient_get(ADVANCED_SEARCH_URL, params=params)
     if resp is None:
-        print(f"[ERROR] Advanced search page {page}: all retries failed")
+        print(f"  [ERROR] Advanced search code={code} page={page}: all retries failed")
         return None
     return BeautifulSoup(resp.text, "html.parser")
 
@@ -394,32 +391,50 @@ def parse_tenders(soup: BeautifulSoup) -> list[dict]:
 
 
 def scrape_unspsc() -> list[dict]:
-    """Search UNSPSC code via viewCFTSAction.do. Deduplicate results."""
+    """
+    Search each UNSPSC code via viewCFTSAction.do.
+    Deduplicates across codes — if a tender appears under multiple codes,
+    the first code wins but all matching codes are recorded.
+    """
     all_tenders: dict[str, dict] = {}
-    print(f"[UNSPSC] Searching code {UNSPSC_CODE} ({UNSPSC_LABEL})...")
-    for page in range(1, MAX_PAGES_UNSPSC + 1):
-        print(f"  Page {page}/{MAX_PAGES_UNSPSC}...")
-        soup = fetch_advanced_page(page)
-        if not soup:
-            break
-        rows = parse_tenders(soup)
-        if not rows:
-            print(f"  No rows on page {page}, stopping.")
-            break
-        for t in rows:
-            if t["id"] not in all_tenders:
-                t["unspsc_code"]  = UNSPSC_CODE
-                t["unspsc_label"] = UNSPSC_LABEL
-                t["matched_kw"]   = keyword_match(t["title"])
-                all_tenders[t["id"]] = t
-        time.sleep(2)
-    print(f"[UNSPSC] {len(all_tenders)} result(s).")
+
+    for code, label in UNSPSC_CODES.items():
+        print(f"\n[UNSPSC] Searching code {code} ({label})...")
+        found = 0
+        for page in range(1, MAX_PAGES_UNSPSC + 1):
+            print(f"  Page {page}/{MAX_PAGES_UNSPSC}...")
+            soup = fetch_advanced_page(code, label, page)
+            if not soup:
+                break
+            rows = parse_tenders(soup)
+            if not rows:
+                print(f"  No rows on page {page}, stopping.")
+                break
+            for t in rows:
+                if t["id"] not in all_tenders:
+                    t["unspsc_code"]  = code
+                    t["unspsc_label"] = label
+                    t["matched_kw"]   = keyword_match(t["title"])
+                    all_tenders[t["id"]] = t
+                    found += 1
+                else:
+                    # Tender already seen under a different code — append this code
+                    existing = all_tenders[t["id"]]
+                    if "unspsc_codes" not in existing:
+                        existing["unspsc_codes"] = [existing["unspsc_code"]]
+                    if code not in existing["unspsc_codes"]:
+                        existing["unspsc_codes"].append(code)
+            time.sleep(2)
+        print(f"  → {found} new result(s) for {code}")
+
+    total = len(all_tenders)
+    print(f"\n[UNSPSC] {total} total unique result(s) across all codes.")
     return list(all_tenders.values())
 
 
 def scrape_keyword_fallback() -> list[dict]:
     """Fallback: scan opened-bids listing, filter by keywords (title only)."""
-    print("[FALLBACK] Keyword scan of opened-bids listing...")
+    print("\n[FALLBACK] Keyword scan of opened-bids listing...")
     all_tenders = []
     for page in range(1, MAX_PAGES_FALLBACK + 1):
         print(f"  Page {page}/{MAX_PAGES_FALLBACK}...")
@@ -491,8 +506,10 @@ def build_email(new_tenders: list[dict], status_changes: list[dict]) -> str:
     new_rows = ""
     for t in new_tenders:
         dr = days_remaining(t["deadline"])
-        kw = t.get("matched_kw", "")
-        unspsc_info = f"UNSPSC {t.get('unspsc_code', '')} ({t.get('unspsc_label', '')})" if t.get("unspsc_code") else "Keyword match"
+        kw = t.get("matched_kw", "") or "—"
+        codes = t.get("unspsc_codes", [t.get("unspsc_code", "")])
+        codes_str = ", ".join(c for c in codes if c)
+        unspsc_info = f"UNSPSC: {codes_str}" if codes_str else "Keyword match"
         new_rows += f"""
         <tr>
           <td style="padding:10px 8px;border-bottom:1px solid #eee;">
@@ -558,6 +575,7 @@ def build_email(new_tenders: list[dict], status_changes: list[dict]) -> str:
           {change_rows}
         </table>"""
 
+    codes_list = ", ".join(f"{c} ({l})" for c, l in UNSPSC_CODES.items())
     return f"""
     <html><body style="font-family:Arial,sans-serif;max-width:800px;margin:auto;padding:20px;">
       <div style="background:#1a4f8a;color:white;padding:20px;border-radius:8px 8px 0 0;">
@@ -569,7 +587,7 @@ def build_email(new_tenders: list[dict], status_changes: list[dict]) -> str:
         {change_section}
         <hr style="margin:24px 0;border:none;border-top:1px solid #eee;">
         <p style="font-size:12px;color:#aaa;">
-          UNSPSC: {UNSPSC_CODE} ({UNSPSC_LABEL})<br>
+          UNSPSC codes: {codes_list}<br>
           Endpoint: viewCFTSAction.do (advanced search)<br>
           Keyword validation: {len(KEYWORDS)} terms (title only)<br>
           Only showing tenders in <strong>Bid Submission</strong> status
@@ -631,11 +649,13 @@ def build_telegram_message(new_tenders: list[dict], status_changes: list[dict]) 
     if new_tenders:
         lines.append(f"<b>🔔 {len(new_tenders)} New Cleaning Tender(s)</b>")
         for t in new_tenders[:5]:
-            kw = t.get("matched_kw", "")
+            kw = t.get("matched_kw", "") or "—"
+            codes = t.get("unspsc_codes", [t.get("unspsc_code", "")])
+            codes_str = ", ".join(c for c in codes if c) or "keyword"
             lines.append(
                 f"• <a href='{t['link']}'>{t['title']}</a>\n"
                 f"  {t['entity']} | Due: {t['deadline']} | {t['status']}\n"
-                f"  Keyword: {kw}"
+                f"  UNSPSC: {codes_str} | Keyword: {kw}"
             )
     if status_changes:
         lines.append(f"\n<b>⚡ {len(status_changes)} Status Change(s)</b>")
@@ -650,20 +670,21 @@ def build_telegram_message(new_tenders: list[dict], status_changes: list[dict]) 
 
 def main():
     now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    codes_list = ", ".join(f"{c} ({l})" for c, l in UNSPSC_CODES.items())
     print(f"\n{'='*55}")
     print(f"  ZPPA Monitor — {now_str}")
-    print(f"  UNSPSC      : {UNSPSC_CODE} ({UNSPSC_LABEL})")
-    print(f"  Endpoint    : viewCFTSAction.do")
-    print(f"  Keywords    : {len(KEYWORDS)} terms (title only)")
-    print(f"  Actionable  : {', '.join(a.title() for a in ACTIONABLE_STATUSES)}")
-    print(f"  Min deadline: {MIN_DAYS_BEFORE_DEADLINE} days")
+    print(f"  UNSPSC codes : {codes_list}")
+    print(f"  Endpoint     : viewCFTSAction.do")
+    print(f"  Keywords     : {len(KEYWORDS)} terms (title only)")
+    print(f"  Actionable   : {', '.join(a.title() for a in ACTIONABLE_STATUSES)}")
+    print(f"  Min deadline : {MIN_DAYS_BEFORE_DEADLINE} days")
     print(f"{'='*55}\n")
 
     # Load previously seen tenders
     state = load_state()
     print(f"[STATE] {len(state)} tender(s) already tracked.\n")
 
-    # ── 1. UNSPSC advanced search ────────────────────────────────
+    # ── 1. UNSPSC advanced search (multiple codes) ───────────────
     candidates = scrape_unspsc()
 
     # ── 2. Keyword fallback if UNSPSC returns nothing ────────────
@@ -701,7 +722,7 @@ def main():
             current = get_tender_status(tid)
             old     = info.get("status", "Unknown")
             if current not in ("Unknown", "") and current != old:
-                print(f"  ⚡ CHANGED: {info['title'][:50]}")
+                print(f"  CHANGED: {info['title'][:50]}")
                 print(f"     {old} → {current}")
                 status_changes.append({
                     "title":      info["title"],
@@ -716,22 +737,25 @@ def main():
 
     # ── 6. Register new tenders in state ─────────────────────────
     for t in new_tenders:
+        codes = t.get("unspsc_codes", [t.get("unspsc_code", "")])
         state[t["id"]] = {
-            "title":       t["title"],
-            "ref":         t["ref"],
-            "entity":      t["entity"],
-            "deadline":    t["deadline"],
-            "method":      t["method"],
-            "status":      t["status"],
-            "link":        t["link"],
-            "unspsc_code": t.get("unspsc_code", ""),
+            "title":        t["title"],
+            "ref":          t["ref"],
+            "entity":       t["entity"],
+            "deadline":     t["deadline"],
+            "method":       t["method"],
+            "status":       t["status"],
+            "link":         t["link"],
+            "unspsc_codes": codes,
             "unspsc_label": t.get("unspsc_label", ""),
-            "matched_kw":  t.get("matched_kw", ""),
-            "first_seen":  now_str,
+            "matched_kw":   t.get("matched_kw", ""),
+            "first_seen":   now_str,
         }
         dr = days_remaining(t["deadline"])
+        codes_str = ", ".join(c for c in codes if c) or "keyword"
+        kw = t.get("matched_kw", "") or "—"
         print(f"\n  [NEW] {t['title']}")
-        print(f"        UNSPSC: {t.get('unspsc_code', 'N/A')} | Keyword: \"{t.get('matched_kw', '')}\"")
+        print(f"        UNSPSC: {codes_str} | Keyword: \"{kw}\"")
         print(f"        Ref: {t['ref']} | Entity: {t['entity']}")
         print(f"        Deadline: {t['deadline']} ({dr}) | Status: {t['status']}")
         print(f"        Link: {t['link']}")
