@@ -491,5 +491,50 @@
     "unspsc_label": "Building and Construction and Maintenance Services",
     "matched_kw": null,
     "first_seen": "2026-04-30 17:23 UTC"
+  },
+  "25794739": {
+    "title": "Tender for Construction  of 1x3 classroom block at Chinema primary  school",
+    "ref": "Manyinga Town Council",
+    "entity": "",
+    "deadline": "Fri May 29 15:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25794739",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-01 08:13 UTC"
+  },
+  "25794144": {
+    "title": "Tender for construction of a 2x3 classroom block at Thomson Akatoka Boarding secondary school",
+    "ref": "Manyinga Town Council",
+    "entity": "",
+    "deadline": "Fri May 29 10:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25794144",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-01 08:13 UTC"
+  },
+  "25794962": {
+    "title": "Tender for Construction  of Maternity wing in loloma mission hospital phase 3",
+    "ref": "Manyinga Town Council",
+    "entity": "",
+    "deadline": "Fri May 29 11:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25794962",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-01 08:13 UTC"
   }
 }
