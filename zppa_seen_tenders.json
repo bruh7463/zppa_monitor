@@ -551,5 +551,20 @@
     "unspsc_label": "Building and Construction Machinery and Accessories",
     "matched_kw": null,
     "first_seen": "2026-05-04 08:31 UTC"
+  },
+  "25876984": {
+    "title": "TENDER FOR THE COMSTRUCTION OF A 1X4 CLASSROOM BLOCK AT KAFUE RIVER BEND PRIMARY SCHOOL SUPPLY OF 120 DESKS, BOREHOLE DRILLING AND EQUIPING AND CONSTRUCTION OF AN ABLUTION BLOCK",
+    "ref": "Chililabombwe Municipal Council",
+    "entity": "",
+    "deadline": "Wed Jun 03 14:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25876984",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-04 17:42 UTC"
   }
 }
