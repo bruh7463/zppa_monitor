@@ -536,5 +536,20 @@
     "unspsc_label": "Building and Construction and Maintenance Services",
     "matched_kw": "construction",
     "first_seen": "2026-05-01 08:13 UTC"
+  },
+  "25053525": {
+    "title": "TENDER FOR THE SUPPLY AND DELIVERY OF DOMESTIC POST-PAID MULTI- JET WATER METERS",
+    "ref": "Luapula Water Supply and Sanitation Company Limited",
+    "entity": "",
+    "deadline": "Thu May 14 10:30:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25053525",
+    "unspsc_codes": [
+      "22000000"
+    ],
+    "unspsc_label": "Building and Construction Machinery and Accessories",
+    "matched_kw": null,
+    "first_seen": "2026-05-04 08:31 UTC"
   }
 }
