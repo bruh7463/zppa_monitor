@@ -581,5 +581,20 @@
     "unspsc_label": "Building and Construction and Maintenance Services",
     "matched_kw": "construction",
     "first_seen": "2026-05-05 12:06 UTC"
+  },
+  "25952763": {
+    "title": "Procurement of a drilling Machine and Accessories",
+    "ref": "Mpika Town Council",
+    "entity": "",
+    "deadline": "Thu Jun 11 10:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25952763",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": null,
+    "first_seen": "2026-05-05 17:25 UTC"
   }
 }
