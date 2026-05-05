@@ -566,5 +566,20 @@
     "unspsc_label": "Building and Construction and Maintenance Services",
     "matched_kw": "construction",
     "first_seen": "2026-05-04 17:42 UTC"
+  },
+  "25887497": {
+    "title": "CONSTRUCTION OF A KITCHEN AND DINING HALL AT KAHARE SECONDARY SCHOOL",
+    "ref": "Nkeyema Town Council",
+    "entity": "",
+    "deadline": "Fri Jun 05 10:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25887497",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-05 12:06 UTC"
   }
 }
