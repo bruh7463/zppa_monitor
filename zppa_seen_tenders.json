@@ -641,5 +641,20 @@
     "unspsc_label": "Structures and Building and Construction",
     "matched_kw": "construction",
     "first_seen": "2026-05-13 13:20 UTC"
+  },
+  "25516553": {
+    "title": "CONSTRUCTION FOR A PLAY PARK IN SIKONGO DISTRICT",
+    "ref": "Sikongo Town Council",
+    "entity": "",
+    "deadline": "Mon Jun 22 09:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=25516553",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-13 18:03 UTC"
   }
 }
