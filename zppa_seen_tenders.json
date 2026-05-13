@@ -611,5 +611,35 @@
     "unspsc_label": "Building and Construction and Maintenance Services",
     "matched_kw": null,
     "first_seen": "2026-05-06 17:42 UTC"
+  },
+  "26254296": {
+    "title": "TENDER FOR THE TENDER FOR COMPLETION OF BOARDING FACILITIES AT CHISITU DAY SECONDARY SCHOOL IN CHIPANGALI DISTRICT \u2013 EASTERN PROVINCE LOT 1 AND MULAKUPIKWA DAY SECONDARY SCHOOL IN CHINSALI DISTRICT - MUCHINGA PROVINCE LOT 2",
+    "ref": "Ministry of Education",
+    "entity": "",
+    "deadline": "Wed Jun 24 14:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26254296",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": null,
+    "first_seen": "2026-05-13 13:20 UTC"
+  },
+  "26235096": {
+    "title": "TENDER FOR THE PROPOSED CONSTRUCTION OF AN OFFICE BLOCK FOR THE DEPARTMENT OF NATIONAL PARKS AND WILDLIFE IN LUANGWA DISTRICT.",
+    "ref": "Ministry of Tourism",
+    "entity": "",
+    "deadline": "Fri Jun 12 10:30:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26235096",
+    "unspsc_codes": [
+      "30000000"
+    ],
+    "unspsc_label": "Structures and Building and Construction",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-13 13:20 UTC"
   }
 }
