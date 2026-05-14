@@ -656,5 +656,35 @@
     "unspsc_label": "Building and Construction and Maintenance Services",
     "matched_kw": "construction",
     "first_seen": "2026-05-13 18:03 UTC"
+  },
+  "26226922": {
+    "title": "TENDER FOR CONSTRUCTION OF PIPED WATER SCHEMES IN KITWE AND KALULUSHI  DISTRICT",
+    "ref": "Copperbelt Provincial Administration",
+    "entity": "",
+    "deadline": "Fri Jun 12 10:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26226922",
+    "unspsc_codes": [
+      "30000000"
+    ],
+    "unspsc_label": "Structures and Building and Construction",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-14 08:38 UTC"
+  },
+  "26281997": {
+    "title": "PROCUREMENT OF WORKS FOR CONSTRUCTION OF A SKILLS CENTRE",
+    "ref": "Kasenengwa Town Council",
+    "entity": "",
+    "deadline": "Fri Jun 12 12:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26281997",
+    "unspsc_codes": [
+      "30000000"
+    ],
+    "unspsc_label": "Structures and Building and Construction",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-14 08:38 UTC"
   }
 }
