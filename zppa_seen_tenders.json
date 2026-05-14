@@ -686,5 +686,35 @@
     "unspsc_label": "Structures and Building and Construction",
     "matched_kw": "construction",
     "first_seen": "2026-05-14 08:38 UTC"
+  },
+  "26280455": {
+    "title": "TENDER FOR CONSTRUCTION OF A SPORT COMPLEX",
+    "ref": "Manyinga Town Council",
+    "entity": "",
+    "deadline": "Mon Jun 15 15:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26280455",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-14 12:55 UTC"
+  },
+  "26261112": {
+    "title": "Tender for the Construction of  Rural Health Post at Kamukanda in Ikelenge ward",
+    "ref": "Ikelenge Town Council",
+    "entity": "",
+    "deadline": "Mon Jun 15 10:30:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26261112",
+    "unspsc_codes": [
+      "30000000"
+    ],
+    "unspsc_label": "Structures and Building and Construction",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-14 12:55 UTC"
   }
 }
