@@ -716,5 +716,35 @@
     "unspsc_label": "Structures and Building and Construction",
     "matched_kw": "construction",
     "first_seen": "2026-05-14 12:55 UTC"
+  },
+  "26374919": {
+    "title": "Tender for construction of a plaza at manyinga bus station  with 11 shops",
+    "ref": "Manyinga Town Council",
+    "entity": "",
+    "deadline": "Mon Jun 15 15:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26374919",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-15 17:39 UTC"
+  },
+  "26341089": {
+    "title": "Tender for construction of  a Bus Station  in manyinga  district Phase2",
+    "ref": "Manyinga Town Council",
+    "entity": "",
+    "deadline": "Mon Jun 15 15:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26341089",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-15 17:39 UTC"
   }
 }
