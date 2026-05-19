@@ -746,5 +746,20 @@
     "unspsc_label": "Building and Construction and Maintenance Services",
     "matched_kw": "construction",
     "first_seen": "2026-05-15 17:39 UTC"
+  },
+  "26455096": {
+    "title": "TENDER FOR THE PROCUREMENT OF NON-CONSULTING SERVICES OF AIR CONDITIONS MAITNENANCE",
+    "ref": "Muchinga Provincial Administration",
+    "entity": "",
+    "deadline": "Fri Jun 19 15:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26455096",
+    "unspsc_codes": [
+      "30000000"
+    ],
+    "unspsc_label": "Structures and Building and Construction",
+    "matched_kw": null,
+    "first_seen": "2026-05-19 13:56 UTC"
   }
 }
