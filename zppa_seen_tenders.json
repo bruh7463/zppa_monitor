@@ -761,5 +761,20 @@
     "unspsc_label": "Structures and Building and Construction",
     "matched_kw": null,
     "first_seen": "2026-05-19 13:56 UTC"
+  },
+  "26390363": {
+    "title": "TENDER FOR ENGINEERING PROCUREMENT AND CONSTRUCTION PLUS FINANCING (EPC+F) WORKS FOR THE EXPANSION AND REHABILITATION OF KAFUE GORGE POWER STATION HEADRACE TUNNEL (KGPS-HT) - ZESCO/EPC/049/2026",
+    "ref": "ZESCO Limited.",
+    "entity": "",
+    "deadline": "Fri Jul 03 10:00:00 CAT 2026",
+    "method": "Open Bidding International",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26390363",
+    "unspsc_codes": [
+      "22000000"
+    ],
+    "unspsc_label": "Building and Construction Machinery and Accessories",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-20 09:36 UTC"
   }
 }
