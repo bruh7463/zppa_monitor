@@ -776,5 +776,20 @@
     "unspsc_label": "Building and Construction Machinery and Accessories",
     "matched_kw": "construction",
     "first_seen": "2026-05-20 09:36 UTC"
+  },
+  "26534142": {
+    "title": "Provision of consultancy services \u2013 architectural, engineering design, quantity surveying, project management and construction supervision for the construction of a mixed-use commercial building in Petauke District Eastern Province",
+    "ref": "National Pension Scheme Authority",
+    "entity": "",
+    "deadline": "Tue Jun 30 14:30:00 CAT 2026",
+    "method": "Open Selection National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26534142",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-21 14:15 UTC"
   }
 }
