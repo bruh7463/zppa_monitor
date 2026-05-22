@@ -791,5 +791,35 @@
     "unspsc_label": "Building and Construction and Maintenance Services",
     "matched_kw": "construction",
     "first_seen": "2026-05-21 14:15 UTC"
+  },
+  "26572891": {
+    "title": "NAPSA/DI/ONS/12/26: PROVISION OF CONSULTANCY SERVICES FOR THE ARCHITECTURAL AND ENGINEERING DESIGN, QUANTITY SURVEYING, PROJECT MANAGEMENT AND CONSTRUCTION SUPERVISION FOR THE REDEVELOPMENT OF KINGSTONE BUILDING IN NDOLA FOR THE NATIONAL PENSION SCHEME AUTHORITY (NAPSA)",
+    "ref": "National Pension Scheme Authority",
+    "entity": "",
+    "deadline": "Fri Jun 26 11:00:00 CAT 2026",
+    "method": "Open Selection National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26572891",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-22 13:33 UTC"
+  },
+  "26596006": {
+    "title": "TENDER FOR CONSTRUCTION OF 7 PIPED WATER SCHEMES IN 5 DISTRICTS OF THE COPPERBELT PROVINCE OF ZAMBIA",
+    "ref": "Copperbelt Provincial Administration",
+    "entity": "",
+    "deadline": "Mon Jun 22 10:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26596006",
+    "unspsc_codes": [
+      "30000000"
+    ],
+    "unspsc_label": "Structures and Building and Construction",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-22 13:33 UTC"
   }
 }
