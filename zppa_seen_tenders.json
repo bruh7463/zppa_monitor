@@ -836,5 +836,20 @@
     "unspsc_label": "Building and Construction and Maintenance Services",
     "matched_kw": null,
     "first_seen": "2026-05-22 17:53 UTC"
+  },
+  "26667733": {
+    "title": "TENDER FOR THE PROPOSED FOUNDATION UNDERPINNING, MENDING OF STRUCTURAL WALL CRACKS, REHABILITATION WORKS  AND CONSTRUCTION OF A GENSET SHELTER AT THE ZAMBEZI PROVIDENT HOUSE FOR THE NATIONAL PENSION SCHEME AUTHORITY (NAPSA) - NAPSA/ONB/DP/07/26",
+    "ref": "National Pension Scheme Authority",
+    "entity": "",
+    "deadline": "Fri Jun 26 11:30:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26667733",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-26 18:27 UTC"
   }
 }
