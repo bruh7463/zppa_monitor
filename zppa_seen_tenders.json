@@ -851,5 +851,50 @@
     "unspsc_label": "Building and Construction and Maintenance Services",
     "matched_kw": "construction",
     "first_seen": "2026-05-26 18:27 UTC"
+  },
+  "26634202": {
+    "title": "TENDER NO. MOH/W/PSU/STBF/011-2025/002 :TENDER FOR THE PROPOSED CONSTRUCTION AND REHABILITATION OF MATERNITY ANNEXES IN SELECTEDED DISTRICTS -SOUTHERN PROVINCE",
+    "ref": "Ministry of Health",
+    "entity": "",
+    "deadline": "Tue Jun 30 10:30:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26634202",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-27 09:52 UTC"
+  },
+  "26633778": {
+    "title": "TENDER NO. MOH/W/PSU/STBF/011-2025/003 TENDER FOR THE PROPOSED CONSTRUCTION AND REHABILITATION OF MARTERNITY ANNEXES IN SELECTEDED DISTRICTS -CENTRAL PROVINCE",
+    "ref": "Ministry of Health",
+    "entity": "",
+    "deadline": "Tue Jun 30 10:30:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26633778",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-27 09:52 UTC"
+  },
+  "26622835": {
+    "title": "construction of Multipurpose hall",
+    "ref": "Luampa Town Council",
+    "entity": "",
+    "deadline": "Thu Jun 25 10:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26622835",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-27 09:52 UTC"
   }
 }
