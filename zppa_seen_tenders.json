@@ -911,5 +911,20 @@
     "unspsc_label": "Structures and Building and Construction",
     "matched_kw": null,
     "first_seen": "2026-05-27 14:29 UTC"
+  },
+  "26732700": {
+    "title": "TENDER NO. MOH/W/PSU/STBF/011-2025/006 -TENDER FOR THE PROPOSED CONSTRUCTION AND REHABILITATION OF MATERNITY ANNEXES IN SELECTED DISTRICTS -MUCHINGA PROVINCE",
+    "ref": "Ministry of Health",
+    "entity": "",
+    "deadline": "Tue Jun 30 10:30:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26732700",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": "construction",
+    "first_seen": "2026-05-28 10:03 UTC"
   }
 }
