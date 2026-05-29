@@ -926,5 +926,20 @@
     "unspsc_label": "Building and Construction and Maintenance Services",
     "matched_kw": "construction",
     "first_seen": "2026-05-28 10:03 UTC"
+  },
+  "26780321": {
+    "title": "Tender For the Completion of a Civic Center In Ngabwe District",
+    "ref": "Ngabwe Town Council",
+    "entity": "",
+    "deadline": "Mon Jun 29 14:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26780321",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": null,
+    "first_seen": "2026-05-29 14:12 UTC"
   }
 }
