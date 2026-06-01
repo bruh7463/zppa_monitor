@@ -956,5 +956,35 @@
     "unspsc_label": "Building and Construction Machinery and Accessories",
     "matched_kw": "construction",
     "first_seen": "2026-05-30 17:07 UTC"
+  },
+  "26829062": {
+    "title": "CONSTRUCTION OF STORAGE SHED AT KATEMBULA UNDER ZAMBIA DEVOLUTION SUPPORT PROGRAM IN LUFWANYAMA DISTRICT.",
+    "ref": "Lufwanyama Town Council",
+    "entity": "",
+    "deadline": "Tue Jun 30 10:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26829062",
+    "unspsc_codes": [
+      "22000000"
+    ],
+    "unspsc_label": "Building and Construction Machinery and Accessories",
+    "matched_kw": "construction",
+    "first_seen": "2026-06-01 11:36 UTC"
+  },
+  "26828721": {
+    "title": "CONSTRUCTION OF ABLUTION BLOCK AND REHABILITATION OF MARKET SHELTER AT ST MARY'S UNDER ZAMBIA DEVOLUTION SUPPORT PROGRAM",
+    "ref": "Lufwanyama Town Council",
+    "entity": "",
+    "deadline": "Tue Jun 30 10:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26828721",
+    "unspsc_codes": [
+      "22000000"
+    ],
+    "unspsc_label": "Building and Construction Machinery and Accessories",
+    "matched_kw": "construction",
+    "first_seen": "2026-06-01 11:36 UTC"
   }
 }
