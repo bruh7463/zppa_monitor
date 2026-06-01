@@ -986,5 +986,20 @@
     "unspsc_label": "Building and Construction Machinery and Accessories",
     "matched_kw": "construction",
     "first_seen": "2026-06-01 11:36 UTC"
+  },
+  "26846636": {
+    "title": "TENDER FOR CONVERSION OF OFFICES INTO STUDENT ACCOMMONDATION AND ASSOCIATED EXTERNAL WORKS AT LEVY MWANAWASA MEDICAL UNIVERSITY IN LUSAKA",
+    "ref": "Levy Mwanawasa Medical University Lusaka",
+    "entity": "",
+    "deadline": "Tue Jun 30 17:00:00 CAT 2026",
+    "method": "Open Bidding National",
+    "status": "Bid Submission",
+    "link": "https://eprocure.zppa.org.zm/epps/cft/prepareViewCfTWS.do?resourceId=26846636",
+    "unspsc_codes": [
+      "72000000"
+    ],
+    "unspsc_label": "Building and Construction and Maintenance Services",
+    "matched_kw": null,
+    "first_seen": "2026-06-01 16:42 UTC"
   }
 }
